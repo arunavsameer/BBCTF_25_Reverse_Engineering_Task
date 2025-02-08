@@ -2,13 +2,11 @@ import os
 import socket
 import threading
 
-# Server configuration
 HOST = "0.0.0.0"
-PORT = int(os.getenv("PORT", 5000))  # Railway auto-assigns a port
+PORT = int(os.getenv("PORT", 5000)) 
 
-# Securely storing sensitive data in environment variables
-FLAG = os.getenv("FLAG", "FLAG{default_flag}")  # Set FLAG in Railway settings
-CORRECT_PASSWORD = os.getenv("PASSWORD", "defualt")  # Secure password storage
+FLAG = os.getenv("FLAG", "FLAG{default_flag}") 
+CORRECT_PASSWORD = os.getenv("PASSWORD", "defualt") 
 OBFUSCATED_PASSWORD = "ba 60 a7 ee 1c 73 90 cf 47 9a 17"
 
 def handle_client(conn, addr):
